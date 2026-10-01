@@ -20,7 +20,7 @@ gxx_linux-64 = ">=11,<12"
 
 
 [pypi-dependencies]
-f8pysdk = {path = ".sdk/packages/f8pysdk", editable = false}
+f8pysdk = {path = ".sdk/python", editable = false}
 hatchling = ">=1.28,<2"
 basedpyright = ">=1.31,<2"
 ruff = ">=0.12,<0.13"
