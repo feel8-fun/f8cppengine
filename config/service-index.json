@@ -1,14 +1,18 @@
 {
   "schemaVersion": "f8serviceIndex/1",
-  "modelRoot": "../resources/models",
+  "modelRoot": "${F8_MODEL_ROOT}",
   "services": [
     {
       "serviceClass": "f8.cppengine",
       "manifests": {
-        "linux": "services/f8.cppengine/service.linux.yml",
-        "win32": "services/f8.cppengine/service.win.yml"
+        "linux": "${F8_PACKAGE_ROOT}/config/services/f8.cppengine/service.linux.yml",
+        "win32": "${F8_PACKAGE_ROOT}/config/services/f8.cppengine/service.win.yml"
       },
-      "describe": "describes/f8.cppengine.json"
+      "describe": "${F8_PACKAGE_ROOT}/config/describes/f8.cppengine.json",
+      "bundleRoots": {
+        "linux": "${F8_PACKAGE_ROOT}/runtime/bundles/f8.cppengine/0.0.1/linux",
+        "win32": "${F8_PACKAGE_ROOT}/runtime/bundles/f8.cppengine/0.0.1/win"
+      }
     }
   ]
 }
